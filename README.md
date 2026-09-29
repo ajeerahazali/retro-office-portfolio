@@ -107,16 +107,23 @@ retro-office-portfolio/
 │   ├── images/
 │   │   ├── backgrounds/            # Paper, noticeboard textures
 │   │   ├── hotspots/               # Glow overlay PNGs (6 hotspots)
+│   │   ├── noticeboard/            # Note & clipboard placeholder PNGs
 │   │   └── office/                 # full-office.png, night-office.png
 │   ├── downloads/
 │   │   └── my_resume.pdf           # Downloadable resume file
-│   └── (various)                   # Favicons and apple-touch-icon at root
+│   ├── apple-icon.png              # Apple touch icon
+│   ├── icon.svg                    # SVG favicon
+│   ├── icon-dark-32x32.png         # Dark-mode favicon
+│   └── icon-light-32x32.png        # Light-mode favicon
 ├── .env.example                   # Contact form API key template
+├── LICENSE                        # MIT License
+├── next-env.d.ts                  # Next.js TypeScript declarations
 ├── next.config.mjs
 ├── tsconfig.json
 ├── postcss.config.mjs
 ├── package.json
-└── pnpm-lock.yaml
+├── pnpm-lock.yaml
+└── pnpm-workspace.yaml
 ```
 
 ---
