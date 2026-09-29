@@ -56,7 +56,7 @@ The design language is inspired by late-90s point-and-click adventure games, wit
 ### Modal System
 - **Records (Resume)** — Paper-textured printable-style resume with download as PDF
 - **Inventory (Skills)** — Tabbed folder view for Skills, Languages, and Certifications
-- **Noticeboard** — Styled sticky notes with pin shadows and rotated layouts
+- **Noticeboard** — Image-based sticky notes with rotated placement
 - **Contact** — Functional contact form via Web3Forms API with transmission-style feedback
 
 ### Audio
@@ -110,7 +110,8 @@ retro-office-portfolio/
 │   │   └── office/                 # full-office.png, night-office.png
 │   ├── downloads/
 │   │   └── my_resume.pdf           # Downloadable resume file
-│   └── icons (various)             # Favicons and apple-touch-icon
+│   └── (various)                   # Favicons and apple-touch-icon at root
+├── .env.example                   # Contact form API key template
 ├── next.config.mjs
 ├── tsconfig.json
 ├── postcss.config.mjs
@@ -172,6 +173,8 @@ The project is designed to deploy seamlessly on **Vercel** (recommended) or any 
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/ajeerahazali/retro-office-portfolio)
 
+> **Note:** Auto-deploy from GitHub will use placeholder clipboard images. To deploy with your real photos, run `vercel deploy --prod` from your local machine after replacing the placeholder files.
+
 Alternatively, for a fully static export:
 
 ```bash
@@ -230,7 +233,13 @@ export const NOTICEBOARD_NOTES: NoticeboardNote[] = [
 ]
 ```
 
-The three clipboard pictures (`public/images/noticeboard/noticeboard-pic-{1,2,3}.png`) are placeholder images in the repo. Replace them with your own photos (same filenames) — they are gitignored so your personal images stay local. To deploy with your real photos, use the Vercel CLI or replace the placeholders before committing.
+The six noticeboard images are placeholder PNGs in the repo. Fork users should replace them with their own:
+
+**Clipboard pictures** (`noticeboard-pic-{1,2,3}.png`) — Replace with your own photos. These are gitignored so your personal images stay local.
+
+**Sticky notes** (`noticeboard-note-{1,2,3}.png`) — Edit the text in this file, regenerate the corresponding PNGs at roughly 2200×1650 px, and place them in `public/images/noticeboard/`.
+
+To deploy with your real images, use `vercel deploy --prod` from your local machine — auto-deploy from GitHub will use the placeholder files.
 
 ### Adding new office hotspots
 
