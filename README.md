@@ -73,7 +73,6 @@ The design language is inspired by late-90s point-and-click adventure games, wit
 | [Next.js 16](https://nextjs.org) (App Router) | React framework with server components and static export |
 | [TypeScript 5.7](https://www.typescriptlang.org) | Type safety and developer experience |
 | [Tailwind CSS 4](https://tailwindcss.com) | Utility-first styling with custom theme tokens |
-| [tw-animate-css](https://github.com/tailwindlabs/tailwindcss-animate) | Tailwind animation utilities |
 | [Vercel Analytics](https://vercel.com/analytics) | Privacy-focused page and event tracking |
 | [Web3Forms](https://web3forms.com) | Contact form submission API |
 | [pnpm](https://pnpm.io) | Fast, disk-efficient package manager |
@@ -230,6 +229,8 @@ export const NOTICEBOARD_NOTES: NoticeboardNote[] = [
   // ...
 ]
 ```
+
+The three clipboard pictures (`public/images/noticeboard/noticeboard-pic-{1,2,3}.png`) are placeholder images in the repo. Replace them with your own photos (same filenames) — they are gitignored so your personal images stay local. To deploy with your real photos, use the Vercel CLI or replace the placeholders before committing.
 
 ### Adding new office hotspots
 
