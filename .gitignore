@@ -13,6 +13,9 @@ __v0_jsx-dev-runtime.ts
 # Kilo editor config
 .kilo/
 
+# Personal photos (replace placeholders locally)
+public/images/noticeboard/noticeboard-pic-*.png
+
 # Common ignores
 node_modules
 .next/
